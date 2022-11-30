@@ -29,7 +29,6 @@
 	<body>
 
 		<div class="reveal">
-
 		<div class="slides">
 	
 <section>
@@ -38,33 +37,14 @@
 		<img src="docker-img/docker-logo.png"/>
 		<br/>
 	</div>
-	<div>
-		<a href="https://2arian3.github.io/"><strong>Arian Boukani</strong></a>
+	<div class="fragment" data-fragment-index="0">
+		<a href="https://2arian3.github.io/" target="_blank"><strong>Arian Boukani</strong></a>
 	</div>
-	<div style="font-size: 26px; margin-top: 25px;">
+	<div style="font-size: 26px; margin-top: 25px;" class="fragment" data-fragment-index="1">
 		The contents of the slides have been stol..., umm, <br/>
 		<i>liberally borrowed</i> from <a href="https://github.com/pointful/docker-intro">pointful</a> materials.<br/>
 		Thanks to everyone at Docker, Inc!
 	</div>
-</section>
-		
-<section>
-	<h2>Since it started in March 2013...</h2>
-	<ul>
-		<li class="fragment" data-fragment-index="0">&gt;More than 64k stars on Github</li>
-		<li class="fragment" data-fragment-index="1">&gt;318B total pulls on Docker hub</li>
-		<li class="fragment" data-fragment-index="2">&gt;7.3M Docker accounts</li>
-		<li class="fragment" data-fragment-index="3">&gt;8.3M repositories on Docker hub</li>
-		<li class="fragment" data-fragment-index="4">1000’s of Dockerized applications</li>
-		<ul>
-			<li class="fragment" data-fragment-index="5">Memcached, Redis, Node.js, Hadoop...</li>
-		</ul>
-		<li class="fragment" data-fragment-index="6">Integration in Jenkins, Travis, Chef, Puppet, Vagrant and OpenStack</li>
-		<li class="fragment" data-fragment-index="7">Meetups arranged around the world…</li>
-		<ul>
-			<li class="fragment" data-fragment-index="8">with organizations like Ebay, Cloudflare, Yandex, and Rackspace presenting on their use of Docker</li>
-		</ul>
-	</ul>
 </section>
 
 <section>
@@ -115,6 +95,25 @@
 		<img src="docker-img/eliminates-matrix-from-hell.png">
 	</p>
 </section>
+		
+<section>
+	<h2>Since it started in March 2013...</h2>
+	<ul>
+		<li class="fragment" data-fragment-index="0">&gt;64k stars on Github</li>
+		<li class="fragment" data-fragment-index="1">&gt;318B total pulls on Docker hub</li>
+		<li class="fragment" data-fragment-index="2">&gt;7.3M Docker accounts</li>
+		<li class="fragment" data-fragment-index="3">&gt;8.3M repositories on Docker hub</li>
+		<li class="fragment" data-fragment-index="4">1000’s of Dockerized applications</li>
+		<ul>
+			<li class="fragment" data-fragment-index="5">Memcached, Redis, Node.js, Hadoop...</li>
+		</ul>
+		<li class="fragment" data-fragment-index="6">Integration in Jenkins, Travis, Chef, Puppet, Vagrant and OpenStack</li>
+		<li class="fragment" data-fragment-index="7">Meetups arranged around the world…</li>
+		<ul>
+			<li class="fragment" data-fragment-index="8">with organizations like Ebay, Cloudflare, Yandex, and Rackspace presenting on their use of Docker</li>
+		</ul>
+	</ul>
+</section>
 
 <section>
 	<h2>Why Developers Care</h2>
@@ -131,7 +130,9 @@
 	</div>
 	<div style="text-align: center; font-size: 24px; line-height: 1.1em; margin-top: 20px;">
 		<i><font color="#9CD4F6">* Where "anywhere" means an x86 server running a modern Linux kernel<br/>
-			(3.2+ generally or 2.6.32+ for RHEL 6.5+,&nbsp;Fedora, &amp; related)</font></i>
+			(3.2+ generally or 2.6.32+ for RHEL 6.5+,&nbsp;Fedora, &amp; related) <br/>
+			In Mac and Windows operating systems, Docker has managed to provision containers<br/> on a micro Linux virtual machine.
+		</font></i>
 	</div>
 </section>
 
@@ -160,7 +161,7 @@
 	<h2>More Technical Details</h2>
 	<div style="position: absolute; left: 1%; top: 100px; width: 48%;" class="absolute-element">
 		<p><b>Why</b></p>
-		<ul style="text-align: left; line-height=1.1em;">
+		<ul style="text-align: left; line-height:1.1em;">
 			<li class="fragment" data-fragment-index="0">Run everywhere</li>
 			<ul style="font-size: 24px;" class="fragment" data-fragment-index="0">
 				<li>Regardless of kernel version</li>
@@ -171,13 +172,13 @@
 			<li class="fragment" data-fragment-index="1">Run anything</li>
 			<ul style="font-size: 24px;" class="fragment" data-fragment-index="1">
 				<li>If it can run on the host, it can run in the container</li>
-				<li>If it can on a Linux kernel, it can run</li>
+				<li>If it can run on a Linux kernel, it can run</li>
 			</ul>
 		</ul>
 	</div>
 	<div style="position: absolute; left: 52%; top: 100px; width: 48%;" class="absolute-element">
 		<p><b>What</b></p>
-		<ul style="text-align: left; line-height=1.1em;">
+		<ul style="text-align: left; line-height:1.1em;">
 			<li class="fragment" data-fragment-index="2">High level: a lightweight VM</li>
 			<ul style="font-size: 24px;" class="fragment" data-fragment-index="2">
 				<li>Own process space</li>
@@ -191,7 +192,7 @@
 				<li>Can also <i>not </i>have its own /sbin/init</li>
 				<li>Container = isolated processes</li>
 				<li>Share kernel with host</li>
-				<liNo device emulation</li>
+				<li>No device emulation</li>
 				<li>&lt;&lt;application container&gt;&gt;</li>
 			</ul>
 		</ul>
@@ -287,6 +288,23 @@
 		<li>Google Group: <a href="https://groups.google.com/forum/#!forum/docker-user">docker-user</a></li>
 		<li>Twitter: <a href="http://twitter.com/docker">@docker</a></li>
 		<li>Meetups: <a href="http://www.docker.io/meetups">www.docker.io/meetups</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>3 worth-watching videos</h2>
+	<ul>
+		<li><a href="https://www.youtube.com/watch?v=0qotVMX-J5s">Containerization explained</a></li>
+		<li><a href="https://www.youtube.com/watch?v=pTFZFxd4hOI">Docker tutorial for beginners</a></li>
+		<li><a href="https://www.youtube.com/watch?v=2vMEQ5zs1ko">Kubernetes and Docker</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>References</h2>
+	<ul>
+		<li><a href="http://www.docker.io/">docker.io</a></li>
+		<li><a href="https://www.docker.com/blog/the-10-most-common-questions-it-admins-ask-about-docker/">10 most common questions admins ask about Docker</a></li>
 	</ul>
 </section>
 
