@@ -5,8 +5,9 @@
   "homepage": "http://lab.hakim.se/reveal-js",
   "subdomain": "revealjs",
   "scripts": {
-    "test": "grunt test",
-    "start": ""
+    "test": "gulp test",
+    "start": "gulp serve",
+    "build": "gulp build"
   },
   "author": {
     "name": "Hakim El Hattab",
