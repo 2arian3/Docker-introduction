@@ -8,7 +8,7 @@ from [pointful](http://pointful.github.io/docker-intro/) materials.
 
 Thanks to everyone at Docker, Inc for all the great work they are doing!
 
-[![ScreenShot](screenshot.png?raw=true)](https://2arian3.github.io/Docker-introduction)
+[![ScreenShot](screenshot.jpeg?raw=true)](https://2arian3.github.io/Docker-introduction)
 
 Feel free to contribute to this repository!
 
