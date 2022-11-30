@@ -221,6 +221,13 @@
 </section>
 
 <section>
+	<h2>Three Important Terms</h2>
+	<p>
+		<img src="docker-img/dockerfile-dockerimage-dockercontainer.png">
+	</p>
+</section>
+
+<section>
 	<h2>What are the Basics of a Docker System?</h2>
 	<p>
 		<img src="docker-img/basics-of-docker-system.png">
@@ -236,6 +243,59 @@
 
 <section>
 	<h1>Demo Time</h1>
+</section>
+
+<section>
+	<section>
+		<h2>Let's Dockerize a Simple App<i><font color="#9CD4F6"><b>*</b></font></i></h2>
+	<pre style="width: 700px; margin-top: 50px;"><code data-trim data-noescape>
+		from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello from Docker!'
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+	</code></pre>
+	<div style="text-align: center; font-size: 24px; line-height: 1.1em; margin-top: 20px;">
+		<i><font color="#9CD4F6">* Move down!<br/>
+		</font></i>
+	</div>
+	</section>
+
+	<section>
+		<h2>Dockerfile</h2>
+		<pre style="width: 700px; margin-top: 50px;"><code data-trim data-noescape>
+			FROM python:3.10-apline
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+		</code></pre>
+	</section>
+	
+	<section>
+		<h2>Building Docker Image</h2>
+		<pre style="width: 700px; margin-top: 50px;"><code data-trim data-noescape>
+			$ docker build -t hello-docker .
+		</code></pre>
+	</section>
+
+	<section>
+		<h2>Creating a Container</h2>
+		<pre style="width: 700px; margin-top: 50px;"><code data-trim data-noescape>
+			$ docker run --rm -it -p 5000:5000 hello-docker
+		</code></pre>
+	</section>
 </section>
 
 <section>
