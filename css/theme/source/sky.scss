@@ -30,7 +30,7 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
 
 // Fix links so they are not cut off
-.reveal a {
+.reveal a:not(.image) {
 	line-height: 1.3em;
 }
 
@@ -38,9 +38,6 @@ $selectionBackgroundColor: #134674;
 @mixin bodyBackground() {
 	@include radial-gradient( #add9e4, #f7fbfc );
 }
-
-// Change text colors against dark slide backgrounds
-@include dark-bg-text-color(#fff);
 
 
 

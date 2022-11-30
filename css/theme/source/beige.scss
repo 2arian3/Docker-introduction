@@ -13,7 +13,18 @@
 
 
 // Include theme-specific fonts
-@import url(./fonts/league-gothic/league-gothic.css);
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../lib/font/league_gothic-webfont.eot');
+	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 
@@ -32,8 +43,6 @@ $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b
 	@include radial-gradient( rgba(247,242,211,1), rgba(255,255,255,1) );
 }
 
-// Change text colors against dark slide backgrounds
-@include dark-bg-text-color(#fff);
 
 
 // Theme template ------------------------------
